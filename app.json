@@ -20,7 +20,8 @@
       "supportsTablet": true,
       "infoPlist": {
         "NSMicrophoneUsageDescription": "Allow $(PRODUCT_NAME) to access your microphone for voice commands"
-      }
+      },
+      "bundleIdentifier": "com.example.picoVoice"
     },
     "android": {
       "adaptiveIcon": {
@@ -29,7 +30,8 @@
       },
       "permissions": [
         "RECORD_AUDIO"
-      ]
+      ],
+      "package": "com.example.picoVoice"
     },
     "web": {
       "favicon": "./assets/favicon.png"
