@@ -93,19 +93,12 @@ export default function App() {
   };
 
   const prettyPrint = (inference) => {
-    let printText = `{\n    "isUnderstood" : "${inference.isUnderstood}",\n`;
-    if (inference.isUnderstood) {
-      printText += `    "intent" : "${inference.intent}",\n`;
-      if (Object.entries(inference.slots).length > 0) {
-        printText += '    "slots" : {\n';
-        for (let [key, slot] of Object.entries(inference.slots)) {
-          printText += `        "${key}" : "${slot}",\n`;
-        }
-        printText += "    }\n";
-      }
-    }
-    printText += "}";
-    return printText;
+    const obj = {
+      isUnderstood: inference.isUnderstood,
+      intent: inference.intent,
+      slots: inference.slots
+    };
+    return JSON.stringify(obj, null, 2);
   };
 
   const startProcessing = async () => {
