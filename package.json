@@ -12,6 +12,7 @@
   "dependencies": {
     "@picovoice/react-native-voice-processor": "^1.0.4",
     "@picovoice/rhino-react-native": "^2.1.1",
+    "dotenv": "^16.0.0",
     "expo": "~44.0.0",
     "expo-asset": "~8.4.6",
     "expo-dev-client": "~0.8.4",

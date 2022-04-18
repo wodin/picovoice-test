@@ -3,9 +3,10 @@ import { PermissionsAndroid, Platform, StyleSheet, Text, TouchableOpacity, View 
 import { RhinoManager, RhinoInference, RhinoErrors } from "@picovoice/rhino-react-native";
 import { Asset } from 'expo-asset';
 import * as FileSystem from 'expo-file-system';
+import Constants from 'expo-constants';
 
 export default function App() {
-  const accessKey = "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX==";
+  const accessKey = Constants.manifest.extra.accessKey;
   const [state, setState] = useState({
     buttonText: "Start",
     buttonDisabled: false,

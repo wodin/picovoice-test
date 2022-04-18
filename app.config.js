@@ -1,3 +1,5 @@
+import "dotenv/config";
+
 function app_variant(base, dev, preview) {
   switch (process.env.APP_VARIANT) {
     case "development":
@@ -20,6 +22,9 @@ export default function ({ config }) {
     ios: {
       ...config.ios,
       bundleIdentifier: app_variant(config.ios.bundleIdentifier, ".dev", ".preview"),
+    },
+    extra: {
+      accessKey: process.env.accessKey,
     },
   };
 }
